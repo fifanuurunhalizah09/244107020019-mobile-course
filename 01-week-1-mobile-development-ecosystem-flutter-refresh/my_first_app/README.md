@@ -1,12 +1,10 @@
-**## Jobsheet 1**
+## Jobsheet 1
 
-*\*Nama:\** Fifa Nuurun Halizah  
- 
-*\*NIM:\** 244107020019  
- 
-*\*Kelas:\** TI-3E  
+*Nama:* Fifa Nuurun Halizah  
+*NIM:* 244107020019  
+*Kelas:* TI-3E  
 
-**### LAPORAN PRAKTIKUM WEEK01**
+### LAPORAN PRAKTIKUM WEEK01
 
 <details>
 
@@ -14,7 +12,7 @@
 
 <blockquote>
 
-**### Langkah Praktikum :**
+### Langkah Praktikum :
 
 Membuat dan menjalankan proyek Flutter
 
@@ -28,34 +26,33 @@ Buka terminal pada folder kerja, lalu jalankan:
 
 ![Langkah 4](screenshoots/4.png)
 
-**### Mengubah UI default**
+### Mengubah UI Default
 
 ![Mengubah UI](screenshoots/5.png)
 
-**### Hasil:**
+### Hasil
 
 ![Hasil Akhir](screenshoots/6.png)
 
-**### Git dan portfolio**
+### Git dan Portfolio
 
 ![Screenshot](screenshoots/7.png)
 
 ![Screenshot](screenshoots/8.png)
 
-
-**### Mini Assignment**
+### Mini Assignment
 
 ![Mini Assignment](screenshoots/9.png)
 
-**### Hasil Mini Assignment**
+### Hasil Mini Assignment
 
 ![Hasil Mini Assignment](screenshoots/10.png)
 
-**### Refleksi**
+### Refleksi
 
 **1. Kapan native lebih tepat dipilih daripada cross-platform?**
 
-Karena native lebih tepat dipilih ketika aplikasi membutuhkan performa tinggi, akses mendalam terhadap fitur perangkat, atau integrasi khusus dengan sistem operasi tertentu.
+Native lebih tepat dipilih ketika aplikasi membutuhkan performa tinggi, akses mendalam terhadap fitur perangkat, atau integrasi khusus dengan sistem operasi tertentu.
 
 **2. Bagaimana perubahan state berhubungan dengan widget tree dan UI deklaratif?**
 
