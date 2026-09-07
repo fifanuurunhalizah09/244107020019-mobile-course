@@ -1,17 +1,38 @@
-# my_first_app
+## Jobsheet 1
+*Nama:* Fifa Nuurun Halizah  
+*NIM:* 244107020019  
+*Kelas:* TI-3E  
 
-A new Flutter project.
+### LAPORAN PRAKTIKUM WEEK01
 
-## Getting Started
+<details>
+<summary><h3>JOBSHEET 1</h3></summary>
 
-This project is a starting point for a Flutter application.
+<blockquote>
 
-A few resources to get you started if this is your first Flutter project:
+### Langkah Praktikum :
+Membuat dan menjalankan proyek Flutter
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Buka terminal pada folder kerja, lalu jalankan:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Langkah 1](screenshoots/1.png)
+![Langkah 2](screenshoots/2.png)
+![Langkah 3](screenshoots/3.png)
+![Langkah 4](screenshoots/4.png)
+
+### Mengubah UI default
+
+![Mengubah UI](screenshoots/5.png)
+
+### Hasil:
+
+![Hasil Akhir](screenshoots/6.png)
+
+### Git dan portfolio
+
+![Screenshot](screenshoots/7.png)
+![Screenshot](screenshoots/8.png)
+
+</blockquote>
+
+</details>
