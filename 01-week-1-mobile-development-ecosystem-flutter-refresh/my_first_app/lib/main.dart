@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget {
             Icon(Icons.person, size: 72),
             SizedBox(height: 16),
             Text('Aliza', style: TextStyle(fontSize: 24)),
+            Text('NIM: 244107020019'),
+            Text('Program Studi: Teknik Informatika'),
             Text('Pemrograman Mobile - Minggu 1'),
           ]),
         ),
