@@ -52,23 +52,23 @@ week3_navigation/
 
 Pada halaman Home terdapat daftar item yang dapat dipilih.
 
-![Struktur project GoRouter](screenshoots/1.png)
+![Struktur Project GoRouter](./screenshoots/1.png)
 
 *Gambar 1. Struktur project `week3_navigation`.*
 
-![Halaman Home](screenshoots/2.png)
+![Halaman Home](./screenshoots/2.png)
 
 *Gambar 2. Halaman Home dengan daftar item.*
 
 Ketika salah satu item dipilih, aplikasi berpindah ke halaman Detail menggunakan route dengan parameter ID.
 
-![Halaman Detail](screenshoots/3.png)
+![Halaman Detail](./screenshoots/3.png)
 
 *Gambar 3. Halaman Detail dengan ID 1.*
 
 Pengujian juga dilakukan dengan membuka path detail secara langsung.
 
-![Direct path Detail](screenshoots/4.png)
+![Direct path Detail](./screenshoots/4.png)
 
 *Gambar 4. Pengujian direct path pada halaman Detail.*
 
@@ -103,7 +103,7 @@ week3_todo/
 └── pubspec.yaml
 ```
 
-![Struktur project ToDo](screenshoots/5.png)
+![Struktur project ToDo](./screenshoots/5.png)
 
 *Gambar 5. Struktur project `week3_todo`.*
 
@@ -111,19 +111,19 @@ Aplikasi ToDo menggunakan Riverpod untuk menyimpan dan mengubah daftar tugas.
 
 Ketika belum terdapat tugas, aplikasi menampilkan pesan bahwa belum ada tugas.
 
-![ToDo kosong](screenshoots/6.png)
+![ToDo kosong](./screenshoots/6.png)
 
 *Gambar 6. Tampilan awal ToDo ketika belum ada tugas.*
 
 Untuk menambahkan tugas, tombol `+` digunakan dan akan menampilkan dialog input.
 
-![Dialog tambah tugas](screenshoots/7.png)
+![Dialog tambah tugas](./screenshoots/7.png)
 
 *Gambar 7. Dialog untuk menambahkan tugas baru.*
 
 Setelah tugas ditambahkan, tugas akan ditampilkan pada daftar dan dapat ditandai sebagai selesai menggunakan checkbox.
 
-![ToDo setelah tugas ditambahkan](screenshoots/8.png)
+![ToDo setelah tugas ditambahkan](./screenshoots/8.png)
 
 *Gambar 8. Tugas berhasil ditambahkan dan ditandai selesai.*
 
@@ -149,7 +149,7 @@ Provider melakukan simulasi pengambilan data dengan `Future.delayed()` sehingga 
 
 Saat data sedang diproses, aplikasi menampilkan `CircularProgressIndicator`.
 
-![AsyncValue loading](screenshoots/9.png)
+![AsyncValue loading](./screenshoots/9.png)
 
 *Gambar 9. Kondisi loading pada halaman Produk.*
 
@@ -157,7 +157,7 @@ Saat data sedang diproses, aplikasi menampilkan `CircularProgressIndicator`.
 
 Setelah proses selesai, data produk ditampilkan pada `ListView`.
 
-![AsyncValue success](screenshoots/10.png)
+![AsyncValue success](./screenshoots/10.png)
 
 *Gambar 10. Kondisi success pada halaman Produk.*
 
@@ -165,7 +165,7 @@ Setelah proses selesai, data produk ditampilkan pada `ListView`.
 
 Jika terjadi kesalahan saat mengambil data, aplikasi menampilkan pesan error dan tombol `Coba lagi`.
 
-![AsyncValue error](screenshoots/11.png)
+![AsyncValue error](./screenshoots/11.png)
 
 *Gambar 11. Kondisi error pada halaman Produk.*
 
@@ -217,25 +217,25 @@ Perbaikan yang dilakukan yaitu:
 
 Pada halaman Statistik terdapat kondisi loading ketika data sedang diambil.
 
-![Stats loading](screenshoots/12.png)
+![Stats loading](./screenshoots/12.png)
 
 *Gambar 12. Kondisi loading pada StatsPage.*
 
 Setelah proses berhasil, tiga data statistik ditampilkan.
 
-![Stats success](screenshoots/13.png)
+![Stats success](./screenshoots/13.png)
 
 *Gambar 13. Kondisi success pada StatsPage.*
 
 Pengujian kondisi loading kembali dilakukan untuk memastikan UI dapat menampilkan indikator proses.
 
-![Stats loading](screenshoots/14.png)
+![Stats loading](./screenshoots/14.png)
 
 *Gambar 14. Tampilan loading StatsPage.*
 
 Ketika data berhasil diambil, data statistik ditampilkan kembali.
 
-![Stats success](screenshoots/15.png)
+![Stats success](./screenshoots/15.png)
 
 *Gambar 15. Data statistik berhasil ditampilkan.*
 
@@ -292,13 +292,13 @@ Route utama:
 
 Navigasi antarhalaman menggunakan `NavigationBar`.
 
-![Dialog ToDo dengan NavigationBar](screenshoots/16.png)
+![Dialog ToDo dengan NavigationBar](./screenshoots/16.png)
 
 *Gambar 16. Halaman ToDo dan NavigationBar.*
 
 Halaman Statistik dapat dibuka melalui menu pada bagian bawah aplikasi.
 
-![Halaman Statistik ToDo](screenshoots/17.png)
+![Halaman Statistik ToDo](./screenshoots/17.png)
 
 *Gambar 17. Halaman Statistik pada aplikasi ToDo.*
 
@@ -326,7 +326,7 @@ flutter test
 
 Hasil pengujian menunjukkan proses testing dapat dijalankan pada project.
 
-![Hasil testing](screenshoots/18.png)
+![Hasil testing](./screenshoots/18.png)
 
 *Gambar 18. Hasil pengujian project.*
 
