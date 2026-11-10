@@ -26,8 +26,12 @@ class AnnouncementPage extends ConsumerWidget {
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (e, _) => Center(child: Text('Error: $e')),
         data: (a) {
-          if (a == null) {
+                    if (a == null) {
             return const Center(child: Text('Pengumuman tidak ditemukan'));
+          }
+
+          if (a.title.trim().isEmpty || a.body.trim().isEmpty) {
+            return const Center(child: Text('Data pengumuman tidak lengkap'));
           }
 
           return SingleChildScrollView(
