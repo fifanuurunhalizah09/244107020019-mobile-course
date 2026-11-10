@@ -22,8 +22,22 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     super.dispose();
   }
 
-  Future<void> _submit() async {
+    Future<void> _submit() async {
     FocusScope.of(context).unfocus();
+    
+    // --- TAMBAHAN KODE VALIDASI ---
+    if (_email.text.trim().isEmpty || _password.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Email dan Kata Sandi tidak boleh kosong!'),
+          behavior: SnackBarBehavior.floating,
+          backgroundColor: Colors.red,
+        ),
+      );
+      return; // Berhenti di sini, jangan lanjut login
+    }
+    // -------------------------------
+
     await ref.read(authStateProvider.notifier).login(
           _email.text.trim(),
           _password.text,
