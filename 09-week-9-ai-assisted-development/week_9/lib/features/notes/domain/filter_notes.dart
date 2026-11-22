@@ -1,8 +1,12 @@
 import 'note.dart';
 
-/// Use case murni: filter notes berdasarkan query judul.
-/// Aturan: case-insensitive, query kosong -> semua notes.
 List<Note> filterNotes(List<Note> notes, String query) {
-  // TODO: akan diimplementasikan oleh AI (Praktikum 2)
-  return notes;
+  final normalizedQuery = query.trim().toLowerCase();
+  if (normalizedQuery.isEmpty) {
+    return List<Note>.unmodifiable(notes);
+  }
+
+  return notes
+      .where((note) => note.title.toLowerCase().contains(normalizedQuery))
+      .toList(growable: false);
 }
