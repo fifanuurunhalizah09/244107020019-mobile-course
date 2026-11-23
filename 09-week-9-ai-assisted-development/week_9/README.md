@@ -192,7 +192,7 @@ Berikut adalah bukti tangkapan layar 3 skenario pengujian fungsionalitas pencari
 
 | 1. Query Kosong (Kondisi Awal) | 2. Query Cocok (`'flutter'`) | 3. Query Tidak Cocok (Empty State) |
 | :---: | :---: | :---: |
-| ![Query Kosong](screenshots/01_query_kosong.png) | ![Query Cocok](screenshots/02_query_cocok.png) | ![Empty State](screenshots/03_query_empty_state.png) |
+| ![Query Kosong](screenshots/gambar1.png) | ![Query Cocok](screenshots/gambar2.png) | ![Empty State](screenshots/gambar3.png) |
 | *Menampilkan seluruh daftar catatan* | *Menyaring hanya catatan yang relevan* | *Menampilkan ikon search_off & pesan kosong* |
 
 ---
