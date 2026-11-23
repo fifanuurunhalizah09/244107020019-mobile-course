@@ -192,7 +192,7 @@ Berikut adalah bukti tangkapan layar 3 skenario pengujian fungsionalitas pencari
 
 | 1. Query Kosong (Kondisi Awal) | 2. Query Cocok (`'flutter'`) | 3. Query Tidak Cocok (Empty State) |
 | :---: | :---: | :---: |
-| ![Query Kosong](screenshots/01_query_kosong.png) | ![Query Cocok](screenshots/02_query_cocok.png) | ![Empty State](screenshots/03_query_empty_state.png) |
+| ![Query Kosong](screenshots/gambar1.png) | ![Query Cocok](screenshots/gambar2.png) | ![Empty State](screenshots/gambar3.png) |
 | *Menampilkan seluruh daftar catatan* | *Menyaring hanya catatan yang relevan* | *Menampilkan ikon search_off & pesan kosong* |
 
 ---
@@ -200,42 +200,18 @@ Berikut adalah bukti tangkapan layar 3 skenario pengujian fungsionalitas pencari
 ## 9. Refleksi Pembelajaran
 
 ### 1. Satu halusinasi AI apa yang Anda temukan dan bagaimana membuktikannya?
-> **Jawaban:**  
-> AI berasumsi menggunakan nama package fiktif `your_app_name` pada kode unit test yang digenerate (`import 'package:your_app_name/...'`). Hal ini terbukti ketika menjalankan `flutter test` dan `flutter analyze`, di mana compiler Dart secara eksplisit mengeluarkan error merah bahwa URI target tidak ditemukan. Pembuktian ini menunjukkan bahwa AI tidak mengetahui konteks file konfigurasi `pubspec.yaml` kecuali kita menyertakannya secara eksplisit dalam prompt.
+**Jawaban:**  
+AI berasumsi menggunakan nama package fiktif `your_app_name` pada kode unit test yang digenerate (`import 'package:your_app_name/...'`). Hal ini terbukti ketika menjalankan `flutter test` dan `flutter analyze`, di mana compiler Dart secara eksplisit mengeluarkan error merah bahwa URI target tidak ditemukan. Pembuktian ini menunjukkan bahwa AI tidak mengetahui konteks file konfigurasi `pubspec.yaml` kecuali kita menyertakannya secara eksplisit dalam prompt.
 
 ### 2. Prompt mana yang paling membantu dan apa yang Anda ubah?
-> **Jawaban:**  
-> Prompt yang menggunakan **Formula 5 Slot** dengan pembatasan eksplisit (*constraint*) adalah yang paling membantu. Awalnya, tanpa batasan layer, AI cenderung menaruh logika pencarian dan manipulasi array langsung di dalam method widget UI. Dengan menambahkan batasan: *"domain layer murni Dart, tanpa import Flutter/Dio/SQLite, dan maksimal 40 baris"*, AI terarah untuk menghasilkan pure function yang modular dan sangat mudah diuji dengan unit test.
+**Jawaban:**  
+Prompt yang menggunakan **Formula 5 Slot** dengan pembatasan eksplisit (*constraint*) adalah yang paling membantu. Awalnya, tanpa batasan layer, AI cenderung menaruh logika pencarian dan manipulasi array langsung di dalam method widget UI. Dengan menambahkan batasan: *"domain layer murni Dart, tanpa import Flutter/Dio/SQLite, dan maksimal 40 baris"*, AI terarah untuk menghasilkan pure function yang modular dan sangat mudah diuji dengan unit test.
 
 ### 3. Satu refactor apa yang Anda lakukan pada kode AI?
-> **Jawaban:**  
-> Melakukan modularisasi method `build()` pada `notes_page.dart`. Awalnya kode UI yang disarankan AI menumpuk seluruh widget Column, TextField, kondisi ternary Empty State, dan ListView dalam satu method `build` sepanjang 65 baris. Saya me-refactor kode tersebut dengan memecahnya menjadi sub-komponen terpisah: `_buildSearchField()`, `_buildEmptyState()`, dan `_buildNotesList()`, sehingga masing-masing method berukuran ringkas (< 30 baris), lebih deklaratif, dan mudah dikelola.
+**Jawaban:**  
+Melakukan modularisasi method `build()` pada `notes_page.dart`. Awalnya kode UI yang disarankan AI menumpuk seluruh widget Column, TextField, kondisi ternary Empty State, dan ListView dalam satu method `build` sepanjang 65 baris. Saya me-refactor kode tersebut dengan memecahnya menjadi sub-komponen terpisah: `_buildSearchField()`, `_buildEmptyState()`, dan `_buildNotesList()`, sehingga masing-masing method berukuran ringkas (< 30 baris), lebih deklaratif, dan mudah dikelola.
 
 ### 4. Keputusan terima/tolak mana yang paling sulit?
-> **Jawaban:**  
-> Keputusan paling krusial adalah **menolak saran AI untuk memindahkan filter ke query database SQL `LIKE %query%`**. Secara teori, query SQL terlihat canggih untuk aplikasi database besar. Namun secara arsitektur dan kebutuhan saat ini, kumpulan data catatan lokal masih berukuran ringkas, sehingga filter in-memory di domain layer murni jauh lebih cepat, tidak membebani I/O disk, dan memungkinkan unit testing murni tanpa perlu konfigurasi mock SQLite yang rumit. Developer harus berani menolak saran AI jika saran tersebut *over-engineering*.
+**Jawaban:**  
+Keputusan paling krusial adalah **menolak saran AI untuk memindahkan filter ke query database SQL `LIKE %query%`**. Secara teori, query SQL terlihat canggih untuk aplikasi database besar. Namun secara arsitektur dan kebutuhan saat ini, kumpulan data catatan lokal masih berukuran ringkas, sehingga filter in-memory di domain layer murni jauh lebih cepat, tidak membebani I/O disk, dan memungkinkan unit testing murni tanpa perlu konfigurasi mock SQLite yang rumit. Developer harus berani menolak saran AI jika saran tersebut *over-engineering*.
 
----
-
-## 10. Cara Menjalankan Proyek
-
-1. **Masuk ke direktori proyek:**
-   ```bash
-   cd week_9
-   ```
-2. **Unduh dependensi:**
-   ```bash
-   flutter pub get
-   ```
-3. **Jalankan analisis kode:**
-   ```bash
-   flutter analyze
-   ```
-4. **Jalankan seluruh test otomatis:**
-   ```bash
-   flutter test
-   ```
-5. **Jalankan aplikasi (Desktop/Chrome/Emulator):**
-   ```bash
-   flutter run
-   ```
