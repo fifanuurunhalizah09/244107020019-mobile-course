@@ -12,19 +12,22 @@ void main() {
   group('filterNotes', () {
     test('mengembalikan note yang cocok secara case-insensitive', () {
       final result = filterNotes(sampleNotes, 'fLuTtEr');
-      
+
       expect(result.length, 1);
       expect(result.first.id, '1');
     });
 
-    test('mengembalikan semua notes jika query kosong atau hanya whitespace', () {
-      expect(filterNotes(sampleNotes, '').length, 3);
-      expect(filterNotes(sampleNotes, '   ').length, 3);
-    });
+    test(
+      'mengembalikan semua notes jika query kosong atau hanya whitespace',
+      () {
+        expect(filterNotes(sampleNotes, '').length, 3);
+        expect(filterNotes(sampleNotes, '   ').length, 3);
+      },
+    );
 
     test('mengembalikan list kosong jika tidak ada title yang cocok', () {
       final result = filterNotes(sampleNotes, 'React Native');
-      
+
       expect(result, isEmpty);
     });
   });
